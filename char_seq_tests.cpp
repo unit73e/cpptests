@@ -5,20 +5,6 @@
 using namespace std;
 
 /**
- * Returns true if the given c-strings are equal or false otherwise.
- */
-bool cstring_equal(const char* a, const char* b) {
-	return strcmp(a, b) == 0 ? true : false;
-}
-
-/**
- * Returns true if the given string is equal to the given c-string.
- */
-bool string_equal(string a, const char* b) {
-	return a.compare(b) ? true : false;
-}
-
-/**
  * Tests if an array of char is the same as a c-string.
  *
  * Borrowed from C, a c-string in C++ is an array of char where the last
@@ -32,8 +18,7 @@ void test_char_seq(void) {
 	char bar[] = "Hello";
 
 	// The variables foo and bar should have the same value
-	bool equal = cstring_equal(foo, bar);
-	assert(equal);
+	assert(strcmp(foo, bar) == 0);
 }
 
 /**
@@ -53,11 +38,11 @@ void test_string_vs_char_seq(void) {
 	string bar2 = hello;
 
 	// Should be equal to the assigned string literals
-	assert(cstring_equal(hello, "Hello"));
+	assert(strcmp(hello, "Hello") == 0);
 	assert(world.compare("World") == 0);
 
 	// Should be equal to the converted values
-	assert(cstring_equal(world2, "World"));
+	assert(strcmp(world2, "World") == 0);
 	assert(bar2.compare("Hello") == 0);
 }
 
