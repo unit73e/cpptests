@@ -19,16 +19,6 @@ bool string_equal(string a, const char* b) {
 }
 
 /**
- * Converts string to c-string.
- */
-const char* to_cstring(string str) {
-	const int result_size = str.size() + 1;
-	char result[result_size];
-	strcpy(result, str.c_str());
-	return result;
-}
-
-/**
  * Tests if an array of char is the same as a c-string.
  *
  * Borrowed from C, a c-string in C++ is an array of char where the last
@@ -57,7 +47,7 @@ void test_string_vs_char_seq(void) {
 	string world = "World";
 
 	// Converts from string to c-string
-	const char* world2 = to_cstring(world);
+	const char* world2 = world.c_str();
 
 	// Converts from c-string to string
 	string bar2 = hello;
