@@ -5,6 +5,7 @@
 #include "data_structures_tests.h"
 #include "type_aliases_tests.h"
 #include "union_tests.h"
+#include "enumerated_types_tests.h"
 
 int main(void) {
 	run_array_tests();
@@ -14,6 +15,7 @@ int main(void) {
 	run_data_structures_tests();
 	run_type_aliases_tests();
 	run_union_tests();
+	run_enumerated_types_tests();
 
 	return 0;
 }
