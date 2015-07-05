@@ -3,6 +3,7 @@
 #include "pointer_tests.h"
 #include "dynamic_memory_tests.h"
 #include "data_structures_tests.h"
+#include "type_aliases_tests.h"
 
 int main(void) {
 	run_array_tests();
@@ -10,6 +11,7 @@ int main(void) {
 	run_pointer_tests();
 	run_dynamic_memory_tests();
 	run_data_structures_tests();
+	run_type_aliases_tests();
 
 	return 0;
 }
